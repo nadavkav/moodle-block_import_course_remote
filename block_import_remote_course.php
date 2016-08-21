@@ -89,7 +89,7 @@ class block_import_remote_course extends block_base {
         // If we have more then one (probably the "news forum") module in the course,
         // Display a warrening, and prevent restore.
         $coursemodulescount = count(get_fast_modinfo($COURSE->id)->cms);
-        if ($coursemodulescount > 10) {
+        if ($coursemodulescount > 1) {
             $this->content->text = get_string('courseisnotempty', 'block_import_remote_course');
         } else {
             $this->content->text .= $form;
